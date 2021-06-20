@@ -9,6 +9,7 @@ public interface MenuService {
     List<Menu> findAll();
 
     void save(Menu menu);
+    void save1(Menu menu);
 
     void update(Menu menu);
 
