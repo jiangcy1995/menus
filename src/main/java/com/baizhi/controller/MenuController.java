@@ -27,6 +27,7 @@ public class MenuController {
     @RequestMapping("findAll")
     public String findAll(HttpServletRequest request){
         System.out.println("v1.0");
+        System.out.println("dev1.0");
         List<Menu> menus=menuService.findAll();
         request.setAttribute("menus",menus);
         System.out.println("dsddddd");
