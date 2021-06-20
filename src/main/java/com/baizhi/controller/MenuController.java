@@ -29,6 +29,7 @@ public class MenuController {
         List<Menu> menus=menuService.findAll();
         request.setAttribute("menus",menus);
         System.out.println("dsddddd");
+        System.out.println("dsddddd");
         return "/menu/back/list";
     }
     @RequestMapping("save")
