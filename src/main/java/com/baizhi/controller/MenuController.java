@@ -31,6 +31,7 @@ public class MenuController {
         System.out.println("v3.0");
         System.out.println("masterv4.0");
         System.out.println("m1");
+        System.out.println("m2");
 
         List<Menu> menus=menuService.findAll();
         request.setAttribute("menus",menus);
