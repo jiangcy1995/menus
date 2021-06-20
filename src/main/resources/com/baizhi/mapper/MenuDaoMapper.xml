@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.MenuDao">
+	<select id="findAll" resultType="Menu">
+		select
+		       id,name,photo,create_date createDate,create_person createPerson,digest,step
+		from menus
+	</select>
+	<insert id="save" parameterType="Menu">
+		insert into menus
+		values(#{id},#{name},#{photo},#{createDate},#{createPerson},#{digest},#{step})
+	</insert>
+	<update id="update" parameterType="Menu">
+		update menus
+		set name=#{name},photo=#{photo,jdbcType=VARCHAR},create_date=#{createDate},create_person=#{createPerson},digest=#{digest},step=#{step}
+		where id=#{id}
+	</update>
+	<select id="findOne" resultType="Menu">
+		select
+			id,name,photo,create_date createDate,create_person createPerson,digest,step
+		from menus
+		where id=#{id}
+	</select>
+	<delete id="delete">
+		delete from menus where id=#{id}
+	</delete>
+</mapper>
