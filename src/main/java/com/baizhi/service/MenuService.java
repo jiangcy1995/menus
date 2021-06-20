@@ -10,6 +10,7 @@ public interface MenuService {
 
     void save(Menu menu);
     void save1(Menu menu);
+    void save2(Menu menu);
 
 
     void update(Menu menu);
