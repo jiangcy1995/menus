@@ -26,17 +26,10 @@ public class MenuController {
     private MenuService menuService;
     @RequestMapping("findAll")
     public String findAll(HttpServletRequest request){
-        System.out.println("v1.0");
-        System.out.println("v2.0");
-        System.out.println("v3.0");
-        System.out.println("masterv4.0");
         System.out.println("m1");
-        System.out.println("mm2");
 
         List<Menu> menus=menuService.findAll();
         request.setAttribute("menus",menus);
-        System.out.println("dsddddd");
-        System.out.println("dsddddd");
         return "/menu/back/list";
     }
     @RequestMapping("save")
